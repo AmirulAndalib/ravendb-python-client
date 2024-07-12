@@ -30,7 +30,7 @@ jobs:
       strategy:
         matrix:
           python-version: [ '3.7', '3.8', '3.10' ,'3.11', '3.12']
-          serverVersion: [ "5.2", "5.4", "6.0" ]
+          serverVersion: [ "5.4", "6.0", "6.1" ]
         fail-fast: false
 
       steps:
