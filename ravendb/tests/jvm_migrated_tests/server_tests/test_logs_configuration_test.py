@@ -1,3 +1,5 @@
+import unittest
+
 from ravendb.serverwide.operations.logs import GetLogsConfigurationOperation, LogMode, SetLogsConfigurationOperation
 from ravendb.tests.test_base import TestBase
 
@@ -6,6 +8,7 @@ class TestLogsConfiguration(TestBase):
     def setUp(self):
         super().setUp()
 
+    @unittest.skip("7.0 logging system breaking changes")
     def test_can_get_and_set_logging(self):
         try:
             get_operation = GetLogsConfigurationOperation()
